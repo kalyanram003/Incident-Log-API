@@ -92,21 +92,35 @@ http://localhost:5000
      "severity": "High"
    }'
    ```
+   **Postman:**
+   - Method: POST
+   - URL: `http://localhost:5000/incidents`
+   - Headers: `Content-Type: application/json`
+   - Body (raw JSON): Same as curl data
 
 2. **Get All Incidents**
    ```bash
    curl http://localhost:5000/incidents
    ```
+   **Postman:**
+   - Method: GET
+   - URL: `http://localhost:5000/incidents`
 
 3. **Get Specific Incident**
    ```bash
    curl http://localhost:5000/incidents/1
    ```
+   **Postman:**
+   - Method: GET
+   - URL: `http://localhost:5000/incidents/1`
 
 4. **Delete Incident**
    ```bash
    curl -X DELETE http://localhost:5000/incidents/1
    ```
+   **Postman:**
+   - Method: DELETE
+   - URL: `http://localhost:5000/incidents/1`
 
 ## Project Structure
 
