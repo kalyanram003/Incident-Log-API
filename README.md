@@ -13,7 +13,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/kalyanram003/Incident-Log-API.git
+   git clone <repository-url>
    cd Incident_log_api
    ```
 
@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    # On Windows
    python -m venv venv
-   venv\Scripts\activate.bat
+   venv\Scripts\activate
 
    # On macOS/Linux
    python3 -m venv venv
@@ -84,13 +84,16 @@ http://localhost:5000
 
 1. **Create Incident**
    ```bash
-   curl -X POST http://localhost:5000/incidents \
-   -H "Content-Type: application/json" \
-   -d '{
-     "title": "Server Down",
-     "description": "Main server is not responding",
-     "severity": "High"
-   }'
+   # Using curl
+   curl -X POST http://localhost:5000/incidents -H "Content-Type: application/json" -d "{\"title\":\"Server Down\",\"description\":\"Main server is not responding\",\"severity\":\"High\"}"
+
+   # Using PowerShell
+   $body = @{
+       title = "Server Down"
+       description = "Main server is not responding"
+       severity = "High"
+   } | ConvertTo-Json
+   Invoke-RestMethod -Uri "http://localhost:5000/incidents" -Method Post -Body $body -ContentType "application/json"
    ```
    **Postman:**
    - Method: POST
@@ -100,7 +103,11 @@ http://localhost:5000
 
 2. **Get All Incidents**
    ```bash
+   # Using curl
    curl http://localhost:5000/incidents
+
+   # Using PowerShell
+   Invoke-RestMethod -Uri "http://localhost:5000/incidents" -Method Get
    ```
    **Postman:**
    - Method: GET
@@ -108,7 +115,11 @@ http://localhost:5000
 
 3. **Get Specific Incident**
    ```bash
+   # Using curl
    curl http://localhost:5000/incidents/1
+
+   # Using PowerShell
+   Invoke-RestMethod -Uri "http://localhost:5000/incidents/1" -Method Get
    ```
    **Postman:**
    - Method: GET
@@ -116,7 +127,11 @@ http://localhost:5000
 
 4. **Delete Incident**
    ```bash
+   # Using curl
    curl -X DELETE http://localhost:5000/incidents/1
+
+   # Using PowerShell
+   Invoke-RestMethod -Uri "http://localhost:5000/incidents/1" -Method Delete
    ```
    **Postman:**
    - Method: DELETE
