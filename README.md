@@ -13,7 +13,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kalyanram003/Incident-Log-API.git
    cd Incident_log_api
    ```
 
