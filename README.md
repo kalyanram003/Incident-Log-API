@@ -63,9 +63,50 @@ Before you begin, ensure you have the following installed:
    ```
    The server will start at `http://localhost:5000`
 
-2. **API Endpoints**
-   - `GET /`: Welcome message
-   - `GET /home`: Welcome message
+## API Endpoints
+
+### Base URL
+```
+http://localhost:5000
+```
+
+### Endpoints
+
+| HTTP Method | Endpoint | Description | Request Body | Response |
+|------------|----------|-------------|--------------|----------|
+| GET | `/` | Welcome message and API documentation | - | JSON with API info |
+| GET | `/incidents` | Fetch all incidents | - | JSON array of incidents |
+| POST | `/incidents` | Create a new incident | JSON: `{ "title": string, "description": string, "severity": "Low"/"Medium"/"High" }` | JSON of created incident |
+| GET | `/incidents/<int:id>` | Fetch a specific incident by its ID | - | JSON of incident |
+| DELETE | `/incidents/<int:id>` | Delete a specific incident by its ID | - | 204 No Content |
+
+### Example Requests
+
+1. **Create Incident**
+   ```bash
+   curl -X POST http://localhost:5000/incidents \
+   -H "Content-Type: application/json" \
+   -d '{
+     "title": "Server Down",
+     "description": "Main server is not responding",
+     "severity": "High"
+   }'
+   ```
+
+2. **Get All Incidents**
+   ```bash
+   curl http://localhost:5000/incidents
+   ```
+
+3. **Get Specific Incident**
+   ```bash
+   curl http://localhost:5000/incidents/1
+   ```
+
+4. **Delete Incident**
+   ```bash
+   curl -X DELETE http://localhost:5000/incidents/1
+   ```
 
 ## Project Structure
 
@@ -91,3 +132,18 @@ Incident_log_api/
 
 ## NOTE
 - Although my core strength lies in Java and Spring Boot, I completed the assignment in Python and Flask to stay aligned with the instructions. I am highly adaptable and can quickly work across multiple backend stacks.
+
+## Contributing
+
+1. Create a new branch for your feature
+2. Make your changes
+3. Test your changes
+4. Submit a pull request
+
+## License
+
+[Specify your license here]
+
+## Support
+
+For support, please [contact information or support channels]
