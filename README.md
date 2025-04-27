@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    # On Windows
    python -m venv venv
-   venv\Scripts\activate
+   venv\Scripts\activate.bat
 
    # On macOS/Linux
    python3 -m venv venv
