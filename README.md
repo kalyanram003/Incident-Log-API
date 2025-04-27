@@ -72,13 +72,13 @@ http://localhost:5000
 
 ### Endpoints
 
-| HTTP Method | Endpoint | Description | Request Body | Response |
-|------------|----------|-------------|--------------|----------|
-| GET | `/` | Welcome message and API documentation | - | JSON with API info |
-| GET | `/incidents` | Fetch all incidents | - | JSON array of incidents |
-| POST | `/incidents` | Create a new incident | JSON: `{ "title": string, "description": string, "severity": "Low"/"Medium"/"High" }` | JSON of created incident |
-| GET | `/incidents/<int:id>` | Fetch a specific incident by its ID | - | JSON of incident |
-| DELETE | `/incidents/<int:id>` | Delete a specific incident by its ID | - | 204 No Content |
+| HTTP Method | Endpoint | Description | Request Body |
+|------------|----------|-------------|--------------|
+| GET | `/` | Welcome message and API documentation | - | 
+| GET | `/incidents` | Fetch all incidents | - |
+| POST | `/incidents` | Create a new incident | JSON: `{ "title": string, "description": string, "severity": "Low"/"Medium"/"High" }` |
+| GET | `/incidents/<int:id>` | Fetch a specific incident by its ID | - | 
+| DELETE | `/incidents/<int:id>` | Delete a specific incident by its ID | - | 
 
 ### Example Requests
 
