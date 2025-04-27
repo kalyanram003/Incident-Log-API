@@ -89,3 +89,5 @@ Incident_log_api/
 - Flask-Migrate for database migrations
 - Python-dotenv for environment variable management
 
+## NOTE
+- Although my core strength lies in Java and Spring Boot, I completed the assignment in Python and Flask to stay aligned with the instructions. I am highly adaptable and can quickly work across multiple backend stacks.
