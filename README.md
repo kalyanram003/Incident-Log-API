@@ -146,18 +146,3 @@ Incident_log_api/
 
 ## NOTE
 - Although my core strength lies in Java and Spring Boot, I completed the assignment in Python and Flask to stay aligned with the instructions. I am highly adaptable and can quickly work across multiple backend stacks.
-
-## Contributing
-
-1. Create a new branch for your feature
-2. Make your changes
-3. Test your changes
-4. Submit a pull request
-
-## License
-
-[Specify your license here]
-
-## Support
-
-For support, please [contact information or support channels]
